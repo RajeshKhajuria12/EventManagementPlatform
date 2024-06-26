@@ -1,0 +1,74 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "EventManagementPlatform",
+    "collectionId": "f010c0e7-bcad-46b3-9e1f-89be7f3c2aef",
+    "dateExported": "2024-06-26T09:23:59.710Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "b97e9927-508f-4788-a961-d9389324d0ae",
+            "colId": "f010c0e7-bcad-46b3-9e1f-89be7f3c2aef",
+            "containerId": "",
+            "name": "delete event",
+            "url": "localhost:3000/api/events/jjnm8x9u0",
+            "method": "DELETE",
+            "sortNum": 10000,
+            "created": "2024-06-26T09:03:34.278Z",
+            "modified": "2024-06-26T09:03:34.278Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"eventName\": \"Tech\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "7666fbb5-f7ca-4152-b38e-0edd57befa9e",
+            "colId": "f010c0e7-bcad-46b3-9e1f-89be7f3c2aef",
+            "containerId": "",
+            "name": "get event",
+            "url": "localhost:3000/api/events/tr8rjltb3",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-06-26T09:04:21.375Z",
+            "modified": "2024-06-26T09:22:46.346Z",
+            "headers": []
+        },
+        {
+            "_id": "efde876a-c92e-44f7-991d-12700f15c2d0",
+            "colId": "f010c0e7-bcad-46b3-9e1f-89be7f3c2aef",
+            "containerId": "",
+            "name": "add event",
+            "url": "localhost:3000/api/events",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-06-26T09:06:30.947Z",
+            "modified": "2024-06-26T09:06:30.947Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"eventName\": \"Tech Conference\",\n    \"eventDate\": \"2024-07-01T00:00:00Z\",\n    \"organizer\": \"John Doe\",\n    \"email\": \"john@example.com\",\n    \"phone\": \"1234567890\",\n    \"location\": {\n        \"street\": \"123 Main St\",\n        \"city\": \"San Francisco\",\n        \"state\": \"CA\",\n        \"zip\": \"94101\"\n    }\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "37b4ff79-0c9c-40d2-9c34-ee230e188377",
+            "colId": "f010c0e7-bcad-46b3-9e1f-89be7f3c2aef",
+            "containerId": "",
+            "name": "update event",
+            "url": "localhost:3000/api/events/tr8rjltb3",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2024-06-26T09:22:07.207Z",
+            "modified": "2024-06-26T09:22:07.207Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"eventName\": \"Tech Conferencedsgfdg\"}",
+                "form": []
+            }
+        }
+    ],
+    "ref": "UKPJMpkb_oEnDheYfwqwURp1oLVxUHMd43HQv0c-aL5hLn5PEf4yTcYnIH8qOrPiGquUvurKFKZTsSgdaU8FvQ"
+}

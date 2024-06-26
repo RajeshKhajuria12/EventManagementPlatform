@@ -47,6 +47,15 @@ The Event Management Platform is a Node.js and TypeScript-based application desi
    DB_NAME=event_management_db  # Replace with your MySQL database name
    ```
 4. **Database Setup:**
+
    ```bash
    npm start
    ```
+
+5. **DB schema**
+
+- Use schema defined in `db/init.sql` run it on your sql server.
+
+6. **Postman collection**
+
+- `postman/thunder-collection_EventManagementPlatform.json`

@@ -29,18 +29,60 @@ export const addEvent = async (req: Request, res: Response) => {
 };
 
 export const updateEvent = async (req: Request, res: Response) => {
-    const { id } = req.params;
+    const eventId = req.params.id;
+    const eventData = req.body;
+
     try {
-        const event = await Event.findByPk(id);
+        // Validate request body if needed
+        if (!eventId) {
+            return res.status(400).json({ message: 'Event ID not provided' });
+        }
+
+        // Check if event exists in the database
+        let event = await Event.findByPk(eventId);
 
         if (!event) {
             return res.status(404).json({ message: 'Event not found' });
         }
 
-        await event.update({ ...req.body, updatedAt: new Date() });
-        res.json(event);
-    } catch (error:any) {
-        res.status(500).json({ error: error.message });
+        // Update event data
+        if (eventData.eventName) {
+            event.eventName = eventData.eventName;
+        }
+        if (eventData.eventDate) {
+            event.eventDate = new Date(eventData.eventDate);
+        }
+        if (eventData.organizer) {
+            event.organizer = eventData.organizer;
+        }
+        if (eventData.email) {
+            event.email = eventData.email;
+        }
+        if (eventData.phone) {
+            event.phone = eventData.phone;
+        }
+        if (eventData.location) {
+            if (eventData.location.street) {
+                event.street=eventData.location.street
+            }
+            if (eventData.location.city) {
+                event.city=eventData.location.city
+            }
+            if (eventData.location.state) {
+                event.state=eventData.location.state
+            }
+            if (eventData.location.zip) {
+                event.zip=eventData.location.zip
+            }
+        }
+        event.updatedAt = new Date();
+
+        await event.save();
+
+        return res.status(200).json({ message: 'Event updated successfully', event });
+    } catch (error) {
+        console.error('Error updating event:', error);
+        return res.status(500).json({ message: 'Failed to update event', error });
     }
 };
 
