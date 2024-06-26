@@ -22,6 +22,31 @@ The Event Management Platform is a Node.js and TypeScript-based application desi
 ## Installation and Setup
 
 1. **Clone the Repository:**
+
    ```bash
    git clone https://github.com/your-username/EventManagementPlatform.git
    cd EventManagementPlatform
+
+   ```
+
+2. **Install dependencies:**
+
+   ```bash
+   npm install
+
+   ```
+
+3. **Set Environment Variables:**
+   - **Create a .env file in the root directory**
+   - **Add the following environment variables:**
+   ```bash
+   PORT=3000  # Replace with desired port number
+   DB_HOST=localhost
+   DB_USER=root  # Replace with your MySQL username
+   DB_PASSWORD=your_password  # Replace with your MySQL password
+   DB_NAME=event_management_db  # Replace with your MySQL database name
+   ```
+4. **Database Setup:**
+   ```bash
+   npm start
+   ```
